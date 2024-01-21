@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.body {
+    background: url("../img/bg3.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: grid;
+}
+#scoreBox {
+    color: yellow;
+    background-color: black;
+    border-radius: 3px;
+    padding: 0px 5px;
+    position: absolute;
+    top: 9px;
+    right: 180px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+#hiscoreBox {
+    color: yellow;
+    background-color: black;
+    border-radius: 3px;
+    padding: 0px 5px;
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+.Outcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+#name{
+    font-size: 58px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+    position: absolute;
+    right: auto;
+    opacity: 40%;
+    z-index: 0;
+    
+}
+#board {
+    background: linear-gradient(rgb(236, 170, 176), rgb(236, 236, 167),rgb(170, 236, 170));
+    width: 90vmin;
+    height: 92vmin;
+    box-shadow: 2px 2px 2px grey,-2px -2px 2px grey;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+.head {
+    background: linear-gradient(rgb(0, 0, 0), rgb(32, 30, 30),rgb(0, 0, 0));
+    /* border: 1.5px solid rgb(18, 0, 18); */
+    transform: scale(1.04);
+    border-radius: 13px;
+    box-shadow:-2px 2px 2px grey;
+    z-index: 2;
+}
+
+.snake {
+    background: linear-gradient(rgb(0, 0, 0), rgb(54, 54, 54),rgb(0, 0, 0));
+    border: 1.5px solid white;
+    transform: scale(1.02);
+    border-radius: 9px;
+    z-index: 2;
+}
+.food {
+    background: linear-gradient(rgb(116, 5, 5), black,rgb(116, 5, 5));
+    box-shadow:-2px 2px 2px grey;
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1325px) {
+    #scoreBox {
+        font-size: 29px;
+        right: 150px;
+    }
+    
+    #hiscoreBox {
+        top: 45px;
+        right: 120px;
+        font-size: 29px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    #scoreBox {
+        top: -3px;
+        left: auto;  
+        font-size: 20px;
+    }
+    #hiscoreBox {
+        top: -3px;  
+        right: 260px;  
+        font-size: 20px;
+    }
+    .head {
+        border-radius: 10px;
+    }
+}
